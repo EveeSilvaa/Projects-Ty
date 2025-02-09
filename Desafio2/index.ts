@@ -1,11 +1,12 @@
 //criar variável number
-let numero: number = 10;
+const numero: number = 10;
 
 //conversão do número para string (inferencia de tipo)
-let numeroString = numero.toString();
+const numberToString = numero.toString();
 
-//imprimir o número maior usando template string 
-console.log(`O numero escolhido é: ${numeroString}`)
+const printMyNumber: string = `Eu vou imprimir o número ${numberToString}`
 
-// ou usando a concatenação
-console.log("o numero escolhido é" + numeroString)
+
+console.log(printMyNumber)
+
+
