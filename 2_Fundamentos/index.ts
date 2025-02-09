@@ -1,18 +1,18 @@
 // 1 - numbers
-let x: number = 10
+let num: number = 10
 
-console.log(x);
+console.log(num);
 
 // 2 - string 
-const firstName: string = "evellyn"
+const firstNameNew: string = "evellyn"
 
-console.log(firstName.toUpperCase())
+console.log(firstNameNew.toUpperCase())
 
 let fullName: string 
 
 const lastName = "silva"
 
-fullName = firstName + " " + lastName 
+fullName = firstNameNew + " " + lastName 
 
 console.log(fullName)
 
@@ -25,3 +25,10 @@ console.log(typeof a)
 a = true
 
 console.log(a)
+
+// 4 - inference e annotation
+const ann: string = "teste"
+
+let inf = "teste"
+
+console.log("testando")
