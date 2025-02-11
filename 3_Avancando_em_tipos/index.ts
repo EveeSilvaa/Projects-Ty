@@ -114,3 +114,53 @@ function showUserRole(role: boolean | string) {
 
 console.log(showUserRole(false))
 console.log(showUserRole("Admin"))
+
+// 12 - type alias
+type ID = string | number
+
+function showId(id: string | number) {
+    console.log(`O ID é: ${id}`)
+}
+
+showId(1)
+showId("200")
+
+// 13 - interface
+interface Point {
+    x: number
+    y: number
+    z: number
+}
+
+function showCoords(obj: Point) {
+    console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}`)
+}
+
+const coordObj:Point = {
+    x: 10,
+    y: 15,
+    z: 20
+}
+
+showCoords(coordObj)
+
+// 14 - diferença entre type alias e interface
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+const somePerson: Person = {name: "maria", age: 21}
+
+console.log(somePerson)
+
+type personType = {
+    name: string
+}
+
+// type personType = {
+//     age: number
+// }
