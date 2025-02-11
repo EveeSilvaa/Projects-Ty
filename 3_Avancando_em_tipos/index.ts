@@ -45,3 +45,72 @@ function greeting(name: string): string {
 console.log(greeting("maria"));
 
 // 6 - funcoes anonimas
+setTimeout(function() {
+    
+    const sallary: number = 1000
+
+    //console.log(parseFloat(sallary))
+
+    //console.log(sallary)
+
+}, 2000)
+
+// 7 - tipos de objetos
+function passCorordinates(coord: {x: number, y: number}) {
+    console.log("X coordinates: " + coord.x)
+    console.log("X coordinates: " + coord.y)
+}
+
+const objCoord = {x: 329, y: 84.2}
+
+passCorordinates(objCoord)
+
+const pessoaObj:{nome: string, surname: string} = {nome: "evellyn", surname: "silva"}
+
+// 8 - props opcionais
+function showNumbers(a: number, b: number, c?: number) {
+    console.log("A: " + a)
+    console.log("B: " + b)
+    if(c) {
+        console.log("C: " + c)
+    }
+}
+
+showNumbers(1, 2, 3)
+showNumbers(4, 5) //sem a interrogação esse argumento não funciona
+
+// 9 - validando argumento opcional
+function advanceGreeting(firstName?: string, lastName?: string) {
+
+    if(lastName !== undefined) {
+        console.log(`olá, ${firstName} ${lastName}, tudo bem?`)
+    }
+
+    return `olá, ${firstName}, tudo bem?`
+}
+
+console.log(advanceGreeting("maria", "silva"))
+console.log(advanceGreeting("kaio"))
+
+// 10 - union type
+function showBalance(balance: string | number) {
+    console.log(`o saldo da conta é R$${balance}`)
+}
+
+showBalance(100)
+showBalance("500")
+//showBalance(true) //O argumento do tipo 'boolean' não é atribuível ao parâmetro do tipo 'string | number'
+
+const arr2: Array<number | string | boolean> = [1, "teste", true]
+
+// 11 - avançando em union type
+function showUserRole(role: boolean | string) {
+    if(typeof role === "boolean") {
+        return "Usúario não aprovado!"
+    }
+
+    return `A função do usuário é: ${role}`
+}
+
+console.log(showUserRole(false))
+console.log(showUserRole("Admin"))
