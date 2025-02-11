@@ -20,7 +20,7 @@ console.log(nums)
 
 console.log(nums[0])
 
-// 3 - any
+// 3 - any(serve para todos os tipos)
 const arr1: any = [1, "teste", true, [], {nome: "maria"}]
 
 console.log(arr1)
@@ -197,7 +197,7 @@ console.log(typeof n)
 
 console.log(n + 100n)
 
-// 18 - symbol
+// 18 - symbol(serve para criar um valor único)
 let symbolA:symbol = Symbol("a")
 let symbolB = Symbol("b") 
 
