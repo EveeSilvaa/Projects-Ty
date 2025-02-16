@@ -38,11 +38,11 @@ soma(4, 5)
 
 // 5 - tipo retornos de funcao
 
-function greeting(name: string): string {
+function greeting1(name: string): string {
     return `olá ${name}`
 }
 
-console.log(greeting("maria"));
+console.log(greeting1("maria"));
 
 // 6 - funcoes anonimas
 setTimeout(function() {

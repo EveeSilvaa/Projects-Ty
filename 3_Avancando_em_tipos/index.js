@@ -24,10 +24,10 @@ function soma(a, b) {
 }
 soma(4, 5);
 // 5 - tipo retornos de funcao
-function greeting(name) {
+function greeting1(name) {
     return `olá ${name}`;
 }
-console.log(greeting("maria"));
+console.log(greeting1("maria"));
 // 6 - funcoes anonimas
 setTimeout(function () {
     const sallary = 1000;
