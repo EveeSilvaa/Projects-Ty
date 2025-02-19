@@ -18,3 +18,14 @@ const shirt1:Product = {
 }
 showProductDetails1(shirt1)
 showProductDetails1({name: "camisa polo", price: 39.90, isAvailable: false})
+
+// 2 - inteface com parametro opcional
+// 3 - propriedades readonly
+// 4 - index signature
+// 5 - herança de interface
+// 6 - intersection type
+// 7 - readonly array
+// 8 - tuplas
+// 9 - tuplas com readonly
+
+
