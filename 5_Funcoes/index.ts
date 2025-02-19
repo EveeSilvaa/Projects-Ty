@@ -62,3 +62,55 @@ function mergeArrays<T>(arr1: T[], arr3: T[]) {
 
 console.log(mergeArrays([1, 2, 3], [5, 6]))
 console.log(mergeArrays<number | string>([1, 2, 3], ["teste", "testando"]))
+
+// 6 - parametros opcionais
+function modernGreeting(name: string, greet?: string) {
+    if(greet) {
+        return `Ola ${greet} ${name}, tudo bem?`
+    } 
+    return `Ola ${name}, tudo bem?`
+}
+
+console.log(modernGreeting("maria"))
+console.log(modernGreeting("maria", "Dr."))
+
+// 7 - Parametro default
+function somaDefault(n: number, m = 10) {
+    return n + m
+}
+
+console.log(somaDefault(10))
+console.log(somaDefault(10, 6))
+
+// 8 - tipo unknown
+function doSomething(x: unknown) {
+    if(Array.isArray(x)) {
+        console.log(x[0])
+    } else if(typeof x === "number") {
+        console.log("x é um número")
+    }
+}
+doSomething([1, 2, 3])
+doSomething(5)
+
+// 9 - never
+function showErroMessage(msg: string): never {
+    throw new Error(msg)
+}
+// showErroMessage("Algum erro!")
+
+// 10 - rest operator
+function sumAll(...n: number[]) {
+    return n.reduce((number, sum) => sum + number)
+}
+console.log(sumAll(1, 2, 3, 4, 5))
+console.log(sumAll(5, 349, 2004))
+
+// 11 - destructing com parametro
+function showProductDetails({name, price}: {name: string, price: number}): string {
+    return `O nome do produto é ${name} e ele custa ${price}`
+}
+
+const shirt = {name: "camisa", price: 49.99}
+
+console.log(showProductDetails(shirt))

@@ -48,3 +48,46 @@ function mergeArrays(arr1, arr3) {
 }
 console.log(mergeArrays([1, 2, 3], [5, 6]));
 console.log(mergeArrays([1, 2, 3], ["teste", "testando"]));
+// 6 - parametros opcionais
+function modernGreeting(name, greet) {
+    if (greet) {
+        return `Ola ${greet} ${name}, tudo bem?`;
+    }
+    return `Ola ${name}, tudo bem?`;
+}
+console.log(modernGreeting("maria"));
+console.log(modernGreeting("maria", "Dr."));
+// 7 - Parametro default
+function somaDefault(n, m = 10) {
+    return n + m;
+}
+console.log(somaDefault(10));
+console.log(somaDefault(10, 6));
+// 8 - tipo unknown
+function doSomething(x) {
+    if (Array.isArray(x)) {
+        console.log(x[0]);
+    }
+    else if (typeof x === "number") {
+        console.log("x é um número");
+    }
+}
+doSomething([1, 2, 3]);
+doSomething(5);
+// 9 - never
+function showErroMessage(msg) {
+    throw new Error(msg);
+}
+// showErroMessage("Algum erro!")
+// 10 - rest operator
+function sumAll(...n) {
+    return n.reduce((number, sum) => sum + number);
+}
+console.log(sumAll(1, 2, 3, 4, 5));
+console.log(sumAll(5, 349, 2004));
+// 11 - destructing com parametro
+function showProductDetails({ name, price }) {
+    return `O nome do produto é ${name} e ele custa ${price}`;
+}
+const shirt = { name: "camisa", price: 49.99 };
+console.log(showProductDetails(shirt));
