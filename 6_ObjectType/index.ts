@@ -144,11 +144,11 @@ anotherUser[0] = "Evellyn"
 console.log(anotherUser[0])
 
 // 9 - tuplas com readonly
-function showNumbers(number: readonly [number, number]) {
+function showNumbers1(number: readonly [number, number]) {
     console.log(number[0])
     console.log(number[1])
 }
 
-showNumbers([1, 2])
+showNumbers1([1, 2])
 
 
