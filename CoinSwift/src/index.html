@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinSwift</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div>
+        <header class="header">
+            <h1>CoinSwift</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+       <h1>Conversor de Moedas</h1>
+       <label for="valor">Valor:</label>
+       <input type="number" id="valor" placeholder="Digite o valor">
+
+       <label for="moedaOrigem">De:</label>
+       <select id="moedaOrigem">
+           <option value="USD">Dólar Americano</option>
+           <option value="BRL">Real Brasileiro</option>
+           <option value="EUR">Euro</option>
+           <option value="BTC">Bitcoin</option>
+        </select>
+
+        <label for="moedaDestino">Para:</label>
+        <select id="moedaDestino">
+            <option value="USD">Dólar Americano</option>
+            <option value="BRL">Real Brasileiro</option>
+            <option value="EUR">Euro</option>
+            <option value="BTC">Bitcoin</option>
+        </select>
+            
+        <button id="btnConverter">Converter</button>
+        <h2>Resultado: <span id="resultado">0</span></h2>
+    </div>
+    
+
+    
+    
+</body>
+</html>
