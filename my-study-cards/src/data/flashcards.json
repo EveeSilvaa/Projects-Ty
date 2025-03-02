@@ -1,0 +1,16 @@
+{
+    "typescript": [
+      { "pergunta": "O que é TypeScript?", "resposta": "TypeScript é um superconjunto de JavaScript que adiciona tipagem estática." },
+      { "pergunta": "Tipos básicos em TypeScript", "resposta": "string, number, boolean, array, tuple, enum, any, void, null, undefined." },
+      { "pergunta": "Interfaces vs Types", "resposta": "Interfaces são extensíveis e usadas para definir objetos, enquanto Types são mais flexíveis e podem definir qualquer tipo." }
+    ],
+    "javascript": [
+      { "pergunta": "O que é JavaScript?", "resposta": "JavaScript é uma linguagem de programação usada para desenvolvimento web." },
+      { "pergunta": "Funções em JavaScript", "resposta": "Funções são blocos de código reutilizáveis que podem ser invocados em qualquer parte do programa." },
+      { "pergunta": "Manipulação do DOM", "resposta": "O DOM (Document Object Model) é uma interface que permite manipular o conteúdo, estrutura e estilo de uma página web." }
+    ],
+    "Python": [
+      { "pergunta": "O que é Python?", "resposta": "O Python é uma linguagem de programação de alto nível, orientada a objetos e de código aberto."},
+      { "pergunta": "Funções em Python", "resposta": "INT, Float, String"}
+    ]
+  }

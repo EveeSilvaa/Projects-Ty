@@ -290,3 +290,77 @@ console.log(genericInstance.showFirst)
 console.log( typeof genericInstance.first)
 
 // 16 - Parameters proprerties
+class ParametersProperties {
+    constructor (public name: string, private qty: number, private price: number) {
+        this.name = name 
+        this.qty = qty
+        this.price = price
+    }
+    get showQty(){
+        return `Qtd total: ${this.qty}`
+    }
+
+    get showPrice(){
+        return `Qtd total: ${this.price}`
+    } // o get funciona tbm como um metodo que consegue acessar o private
+}
+
+const newShoes = new ParametersProperties("Sapato", 5, 115.99)
+
+console.log(newShoes.name)
+
+// console.log(newShoes.price) 
+
+console.log(newShoes.showPrice)
+console.log(newShoes.showQty)
+
+// 17 - class Expressions
+const classMy = class<T> {
+    name;
+
+    constructor(name: T) {
+       this.name = name;
+    }
+}; 
+
+const pessoa = new classMy("lily")
+
+console.log(pessoa);
+
+console.log(pessoa.name);
+
+// 18 - classe abstract 
+
+abstract class AbstractClass {
+    abstract showName(): void;
+}
+
+// const newObject = new AbstractClass();
+
+class AbstractExample extends AbstractClass {
+    name: string;
+
+    constructor(name: string) {
+        super();
+        this.name = name;
+    }
+    showName() {
+        console.log(`o nome é: ${this.name}`);
+    }
+}
+
+const newAbstractObject = new AbstractExample("josias");
+
+newAbstractObject.showName();
+
+// Realações entre classes
+class Bird {
+    name!: string;
+}
+
+class Cat {
+    name ! : string;
+}
+const passarinho: Bird = new Cat();
+
+console.log(passarinho);

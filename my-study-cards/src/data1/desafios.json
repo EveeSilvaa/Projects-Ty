@@ -1,0 +1,26 @@
+{
+  "typescript": [
+    {
+      "pergunta": "O que é TypeScript?",
+      "resposta": "TypeScript é um superconjunto de JavaScript que adiciona tipagem estática.",
+      "opcoes": ["Uma linguagem de estilização", "Um superconjunto de JavaScript", "Um framework para React"]
+    },
+    {
+      "pergunta": "Qual é a principal vantagem do TypeScript?",
+      "resposta": "Tipagem estática, que ajuda a evitar erros durante o desenvolvimento.",
+      "opcoes": ["Tipagem dinâmica", "Tipagem estática", "Nenhuma das alternativas"]
+    }
+  ],
+  "javascript": [
+    {
+      "pergunta": "O que é JavaScript?",
+      "resposta": "JavaScript é uma linguagem de programação usada para desenvolvimento web.",
+      "opcoes": ["Uma linguagem de backend", "Uma linguagem de frontend", "Uma linguagem de banco de dados"]
+    },
+    {
+      "pergunta": "Qual método é usado para adicionar um elemento ao final de um array?",
+      "resposta": "push()",
+      "opcoes": ["push()", "pop()", "shift()"]
+    }
+  ]
+}
