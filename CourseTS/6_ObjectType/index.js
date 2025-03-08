@@ -12,27 +12,11 @@ const shirt1 = {
 };
 showProductDetails1(shirt1);
 showProductDetails1({ name: "camisa polo", price: 39.90, isAvailable: false });
-function showUserDetails(user) {
-    console.log(`O email do usuário é: ${user.email}`);
-    if (user.role) {
-        console.log(`E seu papel é: ${user.role}`);
-    }
-}
-const u1 = {
-    email: "evesilva.contato@gmail.com", role: "admin",
-    name: ""
-};
-const u2 = {
-    email: "evellynsilva@gmail.com",
-    name: ""
-};
-showUserDetails(u1);
-showUserDetails(u2);
-const fusca = {
+const ferrari = {
     brand: "Ford",
     wheels: 4
 };
-console.log(fusca);
+console.log(ferrari);
 let coords = {
     x: 10
 };
