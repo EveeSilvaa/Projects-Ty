@@ -1,3 +1,5 @@
+import { get } from "mongoose";
+
 // 1 - exemplo decorator
 function myDecorator(){
     console.log("iniciando decorator!");
@@ -11,7 +13,7 @@ function myDecorator(){
         console.log(target);
         console.log(propertKey);
         console.log(descriptor);
-    };
+       };
 }
 
 
@@ -74,7 +76,7 @@ console.log(girafa);
 function enumerable(value: boolean) {
     return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
         descriptor.enumerable = value;
-    };
+       };
 }
 class Livro {
     name
@@ -179,4 +181,77 @@ const newBook = new Book(12)
 const pen = new Pen(55);
 
 console.log(newBook.createdAt);
-console.log(pen);
+
+// explo real method decorate
+function CheckIfUserPosted() {
+    return function(
+        target: Object,
+        key: string | symbol,
+        descriptor: PropertyDescriptor
+    ) {
+        const childFunction = descriptor.value;
+        console.log(childFunction);
+        descriptor.value = function(...args: any[]) {
+            if(args[1] === true) {
+                console.log("Usúario já postou!")
+                return null
+            } else {
+                return childFunction.apply(this, args)
+            }
+        }
+
+        return descriptor
+    };
+}
+class Post{
+    alredyPosted = false
+
+    @CheckIfUserPosted()
+    post(content: string, alredyPosted: boolean){
+        this.alredyPosted = true;
+        console.log(`Post do usúario: ${content}`)
+    }
+}
+
+const newPost = new Post();
+
+newPost.post("Meu primeiro post!", newPost.alredyPosted);
+
+// exemplo real com property decorator
+function Max(limit: number) {
+    return function(target: Object, propertyKey: string) {
+       let value:string;
+ 
+       const getter = function() {
+        return value;
+       };
+
+       const setter = function (newVal: string) {
+        if(newVal.length > limit) {
+           console.log(`O valor deve ter no maximo ${limit} digitos.`);
+           return;
+        } else {
+            value = newVal;
+        }
+      };
+      Object.defineProperty(target, propertyKey, {
+        get: getter,
+        set: setter,
+      });
+    }
+}
+class Adm {
+    @Max(10)
+    username;
+
+    constructor(username: string) {
+        this.username = username;
+    }                 
+}
+
+let pedro = new Adm("pedroAdm12345");
+let lee = new Adm("lee");
+
+console.log(lee);
+
+
